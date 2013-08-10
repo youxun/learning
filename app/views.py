@@ -3,4 +3,14 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index
-	pass
+	user = {'nickname':'Miguel'}
+	return '''
+	<html>
+		<head>
+			<title>Home Page</title>
+		</head>
+		<body>
+		<h1>Hello,'''+user['nickname']+'''
+		</body>
+	</html>
+	'''
